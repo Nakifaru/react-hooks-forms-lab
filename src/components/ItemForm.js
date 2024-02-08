@@ -16,7 +16,8 @@ function ItemForm({onItemFormSubmit}) {
     setItemCategory(event.target.value)
   }
 
-  function itemFormSubmit() {
+  function itemFormSubmit(event) {
+    event.preventDefault();
     const newItem = {
       id: uuid(),
       name: itemName,
